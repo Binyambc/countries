@@ -22,7 +22,7 @@ export const fetchCountries = createAsyncThunk(
     }
 );
 
-const selectCountryByName = (state, countryName) => {
+export const selectCountryByName = (state, countryName) => {
     return state.countries.countries.find((country) =>
         country.name.common.toLowerCase() === countryName.toLowerCase() ||
         country.name.official.toLowerCase() === countryName.toLowerCase()
